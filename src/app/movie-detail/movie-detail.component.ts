@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject } from '@angular/core';
 import { Movie } from '../models/movie.model';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-movie-detail',
@@ -7,6 +8,10 @@ import { Movie } from '../models/movie.model';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent {
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Movie) {}
+
+
   @Input() movie!: Movie;
   @Input() openLightbox!: boolean;
 
@@ -18,5 +23,5 @@ export class MovieDetailComponent {
     event.stopPropagation();
   }
 
-  
+
 }
