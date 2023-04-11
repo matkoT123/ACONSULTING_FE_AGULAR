@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="input-group mt-4">
+        <input [(ngModel)]="searchQuery"
+          (input)="searchMovies()"
+          type="text"
+          class="form-control"
+          placeholder="Search movies by title">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div *ngIf="movies.length > 0"
+    class="movie-results">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 parentDiv"
+        *ngFor="let movie of movies">
+        <app-movie-item 
+        [movie]="movie"
+        (movieSelected)="selectedMovie = $event"
+        (changeLightboxState)="lightboxState = $event"
+        ></app-movie-item>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-movie-detail 
+[movie]="selectedMovie"
+[openLightbox]="lightboxState"
+></app-movie-detail>
+

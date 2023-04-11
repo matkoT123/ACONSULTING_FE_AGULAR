@@ -1,0 +1,32 @@
+
+<div *ngIf="openLightbox" 
+(click)="closeLightbox()" 
+class="background">
+  <div 
+    class="lightbox" (click)="stopPropagation($event)">
+    <div class="container">
+      <div class="d-flex flex-row-reverse ">
+        <button class="close-button"
+        (click)="closeLightbox()">X</button>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <img [src]="movie.Poster"
+            alt="{{ movie.Title }} poster"
+            class="lightbox-image">
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h3>{{ movie.Title }}</h3>
+            <p>Year: {{ movie.Year }}</p>
+            <p>Director: {{ movie.Director }}</p>
+            <p>Actors: {{ movie.Actors }}</p>
+            <p>Genre: {{ movie.Genre }}</p>
+            <p>Runtime: {{ movie.Runtime }}</p>
+            <p>Plot: {{ movie.Plot }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

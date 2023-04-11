@@ -1,0 +1,14 @@
+<div class="movie-item card mb-4" 
+(click)="onSelected(movie)">
+  <img [src]="movie.Poster"
+    alt="{{ movie.Title }} poster"
+    class="card-img-top img-fluid movie-img">
+  <div class="card-body">
+    <h3 class="card-title mb-1">{{ movie.Title }}</h3>
+    <p class="card-text mb-2">Year: {{ movie.Year }}</p>
+    <p class="card-text mb-2">Plot: {{ movie.Plot }}</p>
+    <!-- Add more movie details here as needed -->
+  </div>
+</div>
+
+

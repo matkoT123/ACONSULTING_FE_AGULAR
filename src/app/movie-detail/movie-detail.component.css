@@ -1,0 +1,49 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.background:hover {
+  cursor: pointer;
+}
+
+.lightbox {
+  background-color: rgb(250, 250, 250);
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px; 
+    width: 60%;
+    cursor:default;
+}
+
+.lightbox img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.close-button {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  opacity: 0.5;
+  background: none;
+  border: none;
+  position: absolute;
+}
+
+.close-button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
