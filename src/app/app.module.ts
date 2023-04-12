@@ -8,8 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MovieItemComponent } from './search-movie/movie-item/movie-item.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InjectionToken } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -23,10 +21,9 @@ import { InjectionToken } from '@angular/core';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    BrowserAnimationsModule
+    FormsModule
   ],
-  providers: [{ provide: MatMdcDialogData, useClass: MatMdcDialogData }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
