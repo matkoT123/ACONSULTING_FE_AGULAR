@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject } from '@angular/core';
 import { Movie } from '../models/movie.model';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-movie-detail',
@@ -17,6 +18,10 @@ export class MovieDetailComponent {
   stopPropagation(event: Event): void {
     event.stopPropagation();
   }
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: number) {}
+
+  
 
   
 }
